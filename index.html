@@ -3,55 +3,56 @@
 <head>
   <title>MY COOL SITE</title>
   <link rel="icon" type="image/png" href="WindowIcon.png">
-<style>
-  .header1 {
-  padding: 15px;
-  text-align: center;
-  background: black;
-  color: lime;
-  font-size: 30px;
-  border: 5px solid #00ff00;
-}
-  .header2 {
-   padding: 5px;
-   text-align: centre;
-   background: black;
-   color: black;
-   font-size: 15px;
-   border: 3px solid #00ffff;
-  }
-.rainbow {
-  background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet);
-  -webkit-background-clip: text;
-  background-clip: text;
-  color: transparent;
-  font-weight: bold;
-}
-  
-</style>
+  <style>
+    .header1 {
+      padding: 15px;
+      text-align: center;
+      background: black;
+      color: lime;
+      font-size: 30px;
+      border: 5px solid #00ff00;
+    }
+
+    .header2 {
+      padding: 5px;
+      text-align: centre;
+      background: black;
+      color: black;
+      font-size: 15px;
+      border: 3px solid #00ffff;
+    }
+
+    .rainbow {
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet);
+      -webkit-background-clip: text;
+      background-clip: text;
+      color: transparent;
+      font-weight: bold;
+    }
+  </style>
 
 </head>
 
 <body bgcolor="black" text="lime" link="yellow">
 
-<!-- === Header Section One BIG === -->
+  <!-- === Header Section One: BIG === -->
   <center>
     <div class="header1">
       <h1>WELCOME TO MY WEBSITE!</h1>
       <p>Here's some stuff about me:</p>
     </div>
   </center>
-<!-- === Break === -->
+  <!-- === Break === -->
   <br>
-<!-- === Header Section Two MEDIUM === -->
+  <!-- === Header Section Two: MEDIUM === -->
   <center>
     <div class="header2">
       <h1 class="rainbow"> MY COOL HOBBIES I HAVE: </h1>
     </div>
   </center>
-<!-- === Break === -->
+  <!-- === Break === -->
   <br>
-<!-- === Table of Hobbies === -->
+  <!-- === Table of Hobbies === -->
   <center>
     <table border="3" cellpadding="10" bordercolor="magenta">
       <tr>
@@ -67,34 +68,47 @@
     </table>
   </center>
 
-<!-- === Break === -->
+  <!-- === Break === -->
   <br>
-<!-- === Header Section Three MEDIUM === -->
+  <!-- === Header Section Three: MEDIUM === -->
   <center>
     <div class="header2">
       <h1 class="rainbow"> TOP 5 FAVOURITE VIDEO GAMES: </h1>
     </div>
   </center>
-<!-- === Break === -->
+  <!-- === Break === -->
   <br>
-  
-<!-- === Table of Video Games === -->
-  <center>
-    <table border="3" cellpadding="10" bordercolor="magenta">
+
+  <!-- === Table of Video Games === -->
+  <centre>
+    <table border="0" cellpadding="15" width="80%">
       <tr>
-        <td>
-          <h3>Top 5 Video Games:</h3>
-          <ol>
-            <li>Bioshock: Remastered</li>
-            <li>Inscryption</li>
-            <li>Baldi's Basics Classic Remastered</li>
-            <li>Broforce</li>
-            <li>Two Player Battles on Scratch</li>
-          </ol>
+        <!-- LEFT SIDE: Your Image -->
+        <td valign="top" align="center" width="40%">
+          <!-- Replace 'GAME_IMAGE.gif' with your actual file name -->
+          <img src="GAME_IMAGE.gif" width="200" style="border: 5px double cyan;">
+          <br>
+          <small><i>Current High Score: 9999</i></small>
+        </td>
+        <td valign="top">
+          <table border="3" cellpadding="10" bordercolor="magenta">
+            <tr>
+              <td>
+                <h3>Top 5 Video Games:</h3>
+                <ol>
+                  <li>Bioshock: Remastered</li>
+                  <li>Inscryption</li>
+                  <li>Baldi's Basics Classic Remastered</li>
+                  <li>Broforce</li>
+                  <li>Two Player Battles on Scratch</li>
+                </ol>
+              </td>
+            </tr>
+          </table>
         </td>
       </tr>
     </table>
-  </center>
+  </centre>
 
 </body>
 
