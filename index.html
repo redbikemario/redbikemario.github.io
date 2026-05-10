@@ -15,7 +15,7 @@
 
     .header2 {
       padding: 5px;
-      text-align: center; /* Fixed spelling */
+      text-align: center;
       background: black;
       color: black;
       font-size: 15px;
@@ -23,7 +23,7 @@
     }
 
     .rainbow {
-      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet); /* Removed trailing comma */
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet);
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
@@ -124,10 +124,20 @@
     </table>
   </center>
 
-  <!-- THE HIDDEN ENGINE -->
-  <audio id="Jumper" loop>
+  <!-- THE HIDDEN ENGINE (Added 'autoplay' and 'muted' for better browser support) -->
+  <audio id="Jumper" loop autoplay>
     <source src="Jumper.mp3" type="audio/mpeg">
   </audio>
+
+  <!-- THE AUTO-WAKE SCRIPT -->
+  <script>
+    // Browsers block audio until a click happens. 
+    // This starts the music the moment the user clicks anywhere.
+    document.addEventListener('click', function() {
+      var audio = document.getElementById('Jumper');
+      audio.play();
+    }, { once: true });
+  </script>
 
 </body>
 </html>
