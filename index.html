@@ -15,7 +15,7 @@
 
     .header2 {
       padding: 5px;
-      text-align: centre;
+      text-align: center; /* Fixed spelling */
       background: black;
       color: black;
       font-size: 15px;
@@ -23,14 +23,13 @@
     }
 
     .rainbow {
-      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet,);
+      background: linear-gradient(to right, red, orange, yellow, green, blue, indigo, violet, red, orange, yellow, green, blue, indigo, violet); /* Removed trailing comma */
       -webkit-background-clip: text;
       background-clip: text;
       color: transparent;
       font-weight: bold;
     }
   </style>
-
 </head>
 
 <body bgcolor="black" text="lime" link="yellow">
@@ -42,30 +41,33 @@
       <p>Here's some stuff about me:</p>
     </div>
   </center>
-  <!-- === Break === -->
+
   <br>
+
   <!-- MUSIC PLAYER -->
   <center>
-  <table border="2" bordercolor="cyan" cellpadding="5" bgcolor="#222">
-    <tr>
-      <td>
-        <small style="color: cyan;">MUSIC PLAYER</small><br>
-        <button onclick="document.getElementById('Jumper').play()">PLAY</button>
-        <button onclick="document.getElementById('Jumper').pause()">STOP</button>
-      </td>
-    </tr>
-  </table>
-</center>
-  <!-- === Break === -->
+    <table border="2" bordercolor="cyan" cellpadding="5" bgcolor="#222">
+      <tr>
+        <td>
+          <small style="color: cyan;">MUSIC PLAYER</small><br>
+          <button onclick="document.getElementById('Jumper').play()">PLAY</button>
+          <button onclick="document.getElementById('Jumper').pause()">STOP</button>
+        </td>
+      </tr>
+    </table>
+  </center>
+
   <br>
+
   <!-- === Header Section Two: MEDIUM === -->
   <center>
     <div class="header2">
       <h1 class="rainbow"> MY COOL HOBBIES I HAVE: </h1>
     </div>
   </center>
-  <!-- === Break === -->
+
   <br>
+
   <!-- === Table of Hobbies === -->
   <center>
     <table border="3" cellpadding="10" bordercolor="magenta">
@@ -82,24 +84,22 @@
     </table>
   </center>
 
-  <!-- === Break === -->
   <br>
+
   <!-- === Header Section Three: MEDIUM === -->
   <center>
     <div class="header2">
       <h1 class="rainbow"> TOP 5 FAVOURITE VIDEO GAMES: </h1>
     </div>
   </center>
-  <!-- === Break === -->
+
   <br>
 
   <!-- === Table of Video Games === -->
   <center>
     <table border="0" cellpadding="15" width="80%">
       <tr>
-        <!-- LEFT SIDE: Your Image -->
         <td valign="top" align="center" width="40%">
-          <!-- Replace 'GAME_IMAGE.gif' with your actual file name -->
           <img src="FunnyScreenshot.png" width="200" style="border: 5px double cyan;">
           <br>
           <small><i>Funny Screenshot</i></small>
@@ -124,6 +124,10 @@
     </table>
   </center>
 
-</body>
+  <!-- THE HIDDEN ENGINE -->
+  <audio id="Jumper" loop>
+    <source src="Jumper.mp3" type="audio/mpeg">
+  </audio>
 
+</body>
 </html>
