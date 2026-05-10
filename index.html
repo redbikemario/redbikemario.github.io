@@ -38,43 +38,47 @@
   <center>
     <div class="header1">
       <h1 style="text-shadow: 0px 0px 8px #00ff00;">WELCOME TO MY WEBSITE!</h1>
-      <p>Here's some stuff about me:</p>
+      <p>Hope you enjoy your stay!</p>
     </div>
   </center>
 
-<br>
-<center>
-  <font size="4">
-    <a href="index.html">HOME</a> | 
-    <a href="gallery.html">SCREENSHOTS</a> | 
-    <a href="https://www.google.com" target="_blank">GOOGLE</a>
-  </font>
-</center>
-<br>
-  <!-- MUSIC PLAYER -->
-  <div align="right" style="padding-right: 50px; padding-top: 30px;">
-    <table border="2" bordercolor="cyan" cellpadding="5" bgcolor="#222">
+  <br>
+  <!-- Cool Links -->
+  <center>
+    <table border="0" cellpadding="15" width="80%">
       <tr>
+        <td valign="top">
+          <font size="4">
+            <a href="index.html">HOME</a> |
+            <a href="gallery.html">SCREENSHOTS</a> |
+            <a href="https://www.google.com" target="_blank">GOOGLE</a>
+          </font>
+        </td>
         <td>
-          <small style="color: cyan;">MUSIC PLAYER</small><br>
-          <button onclick="document.getElementById('Jumper').play()">PLAY</button>
-          <button onclick="document.getElementById('Jumper').pause()">STOP</button>
+          <!-- MUSIC PLAYER -->
+          <div align="right" style="padding-right: 50px; padding-top: 30px;">
+            <table border="2" bordercolor="cyan" cellpadding="5" bgcolor="#222">
+              <tr>
+                <td>
+                  <small style="color: cyan;">MUSIC PLAYER</small><br>
+                  <button onclick="document.getElementById('Jumper').play()">PLAY</button>
+                  <button onclick="document.getElementById('Jumper').pause()">STOP</button>
+                </td>
+              </tr>
+            </table>
+          </div>
         </td>
       </tr>
     </table>
-  </div>
-
+  </center>
   <br>
-
   <!-- === Header Section Two: MEDIUM === -->
   <center>
     <div class="header2">
-      <h1 class="rainbow"> MY COOL HOBBIES I HAVE: </h1>
+      <h1 class="rainbow"> THE COOL HOBBIES I HAVE: </h1>
     </div>
   </center>
-
   <br>
-
   <!-- === Table of Hobbies === -->
   <center>
     <table border="3" cellpadding="10" bordercolor="magenta">
@@ -90,18 +94,14 @@
       </tr>
     </table>
   </center>
-
   <br>
-
   <!-- === Header Section Three: MEDIUM === -->
   <center>
     <div class="header2">
       <h1 class="rainbow"> TOP 5 FAVOURITE VIDEO GAMES: </h1>
     </div>
   </center>
-
   <br>
-
   <!-- === Table of Video Games === -->
   <center>
     <table border="0" cellpadding="15" width="80%">
@@ -122,10 +122,11 @@
                   <li>Baldi's Basics Classic Remastered</li>
                   <li>Broforce</li>
                   <li>
-  <a href="https://scratch.mit.edu/projects/292728003/" target="_blank" style="color: lime; text-decoration: none; font-weight: bold;">
-    Two Player Battles on Scratch
-  </a>
-</li>
+                    <a href="https://scratch.mit.edu/projects/292728003/" target="_blank"
+                      style="color: lime; text-decoration: none; font-weight: bold;">
+                      Two Player Battles on Scratch
+                    </a>
+                  </li>
                 </ol>
               </td>
             </tr>
@@ -144,11 +145,12 @@
   <script>
     // Browsers block audio until a click happens. 
     // This starts the music the moment the user clicks anywhere.
-    document.addEventListener('click', function() {
+    document.addEventListener('click', function () {
       var audio = document.getElementById('Jumper');
       audio.play();
     }, { once: true });
   </script>
 
 </body>
+
 </html>
