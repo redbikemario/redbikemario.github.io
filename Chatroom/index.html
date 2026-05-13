@@ -1,1 +1,58 @@
+<!-- === THE REDBIKEMARIO LOCAL CHAT ENGINE === -->
+<center>
+  <table border="3" bordercolor="cyan" bgcolor="black" cellpadding="0" cellspacing="0" width="400">
+    <tr>
+      <td bgcolor="cyan" style="color: black; padding: 5px; font-family: monospace; font-weight: bold; font-size: 14px;">
+        [!] RED_CHAT_v1.0.exe
+      </td>
+    </tr>
+    <tr>
+      <td style="padding: 10px;">
+        <!-- CHAT DISPLAY AREA -->
+        <div id="chat-display" style="height: 200px; overflow-y: scroll; font-family: 'Courier New', monospace; font-size: 13px; color: lime; text-align: left; background: #050505; padding: 10px; border: 1px solid #222;">
+          <small style="color: #444;">[SYSTEM]: Terminal connected. Messages will not be saved on refresh.</small><br>
+        </div>
+      </td>
+    </tr>
+    <tr>
+      <td style="border-top: 2px solid cyan; padding: 10px; background: #111;">
+        <!-- INPUT AREA -->
+        <input type="text" id="user-msg" placeholder="Type here..." 
+               style="background: black; color: lime; border: 1px solid cyan; width: 75%; font-family: monospace; padding: 5px;">
+        <button onclick="sendMessage()" 
+                style="background: cyan; border: none; font-weight: bold; cursor: pointer; padding: 5px 10px; font-family: monospace;">
+          SEND
+        </button>
+      </td>
+    </tr>
+  </table>
+</center>
 
+<script>
+// This function handles sending the message
+function sendMessage() {
+  var input = document.getElementById("user-msg");
+  var display = document.getElementById("chat-display");
+
+  if (input.value.trim() !== "") {
+    var now = new Date();
+    // Padding minutes with a zero if they are less than 10 (e.g. 19:05 instead of 19:5)
+    var time = now.getHours() + ":" + (now.getMinutes() < 10 ? '0' : '') + now.getMinutes();
+
+    // The 'redbikemario' update!
+    display.innerHTML += "<div style='margin-bottom:5px;'><span style='color:yellow;'>[" + time + "]</span> <b style='color:cyan;'>redbikemario:</b> " + input.value + "</div>";
+
+    input.value = ""; // Clear input
+    display.scrollTop = display.scrollHeight; // Auto-scroll
+  }
+}
+
+// THE ENTER KEY FIX: 
+// This listens for any key press inside the input box.
+document.getElementById("user-msg").addEventListener("keydown", function(event) {
+  if (event.key === "Enter") {
+    event.preventDefault(); // Stop the page from refreshing
+    sendMessage();          // Fire the send function
+  }
+});
+</script>
